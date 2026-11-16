@@ -1,0 +1,40 @@
+/* Stylix Base 16 Mapping */
+
+/* Base 16 Mapping */
+@define-color black           #1d202f;
+@define-color red             #f7768e;
+@define-color green           #9ece6a;
+@define-color yellow          #e0af68;
+@define-color blue            #7aa2f7;
+@define-color magenta         #bb9af7;
+@define-color cyan            #7dcfff;
+@define-color white           #a9b1d6;
+                              
+@define-color bright-black    #414868;
+@define-color bright-red      #ff899d;
+@define-color bright-green    #9fe044;
+@define-color bright-yellow   #faba4a;
+@define-color bright-blue     #8db0ff;
+@define-color bright-magenta  #c7a9ff;
+@define-color bright-cyan     #a4daff;
+@define-color bright-white    #c0caf5;
+
+/* Harness Waybar Internal Map. */
+@define-color accent        @bright-white;
+@define-color main-br       @black;
+@define-color main-bg       @black;
+@define-color main-fg       @white;
+@define-color hover-bg      @blue;
+@define-color hover-fg      @blue;
+@define-color outline       @black;
+
+/* Module Backgrounds */
+@define-color workspaces    @green;
+@define-color outer-module  @black;
+@define-color center-module @green;
+@define-color inner-module  @bright-black;
+
+/* State */
+@define-color warning       @yellow;
+@define-color critical      @bright-red;
+@define-color charging      @green;

@@ -1,0 +1,113 @@
+/*------------------
+    window count
+------------------*/
+
+#windowcount {
+	margin-right: 12px;
+}
+#windowcount label {
+	color: @hover-fg;
+}
+
+/*-----------------
+    temperature
+-----------------*/
+
+#custom-left_div.2 {
+	color: @outer-module;
+}
+#temperature {
+	background-color: @outer-module;
+}
+
+/*------------
+    memory
+------------*/
+
+#custom-left_div.3 {
+	background-color: @outer-module;
+	color: @center-module;
+}
+#memory {
+	background-color: @center-module;
+}
+
+/*---------
+    cpu
+---------*/
+
+#custom-left_div.4 {
+	background-color: @center-module;
+	color: @inner-module;
+}
+#cpu {
+	background-color: @inner-module;
+}
+
+#custom-left_inv.1 {
+	color: @inner-module;
+}
+
+/*-----------------
+    distro icon
+-----------------*/
+
+#custom-left_div.5,
+#custom-right_div.2 {
+	color: @accent;
+}
+#custom-distro {
+	padding: 0 10px 0 5px;
+	background-color: @accent;
+	color: @main-bg;
+}
+
+/*----------
+    time
+----------*/
+#custom-right_inv.1 {
+	color: @inner-module;
+}
+
+#clock.time {
+	padding-left: 18px;
+	padding-right: 6px;
+	background-color: @inner-module;
+}
+#custom-right_div.3 {
+	background-color: @center-module;
+	color: @inner-module;
+}
+
+/*----------
+    date
+----------*/
+
+#clock.date {
+	padding-left: 6px;
+	background-color: @center-module;
+}
+#custom-right_div.4 {
+	background-color: @outer-module;
+	color: @center-module;
+}
+
+/*-----------------
+    system tray
+-----------------*/
+
+#network {
+	background-color: @outer-module;
+	padding: 0 6px 0 4px;
+}
+#bluetooth {
+	background-color: @outer-module;
+	padding: 0 5px;
+}
+#custom-system_update {
+	background-color: @outer-module;
+	padding: 0 8px 0 2px;
+}
+#custom-right_div.5 {
+	color: @outer-module;
+}

@@ -1,0 +1,48 @@
+/* From original catppuccin-mocha */
+@define-color red           #f38ba8;
+@define-color lavender      #b4befe;
+@define-color text          #cdd6f4;
+@define-color subtext0      #a6adc8;
+@define-color surface0      #313244;
+@define-color base          #1e1e2e;
+@define-color mantle        #181825;
+@define-color crust         #11111b;
+
+/* Base 16 Mapping */
+@define-color black   @crust;
+/*@define-color red     @;*/
+/*@define-color green   @;*/
+@define-color yellow  #f9e2af;
+@define-color blue    @mantle;
+@define-color magenta @subtext0;
+@define-color cyan    @base;
+@define-color white   @text;
+
+@define-color bright-black    @surface0;
+@define-color bright-red      @red;
+@define-color bright-green    @subtext0;
+@define-color bright-yellow   @yellow;
+/*@define-color bright-blue     @;*/
+@define-color bright-magenta  @lavender;
+/*@define-color bright-cyan     @;*/
+/*@define-color bright-white    @;*/
+
+/* Harness Waybar Internal Map. */
+@define-color accent        @bright-magenta;
+@define-color main-br       @magenta;
+@define-color main-bg       @black;
+@define-color main-fg       @white;
+@define-color hover-bg      @cyan;
+@define-color hover-fg      alpha(@main-fg, 0.75);
+@define-color outline       shade(@main-bg, 0.5);
+
+/* Module Backgrounds */
+@define-color workspaces    @blue;
+@define-color outer-module  @blue;
+@define-color center-module @cyan;
+@define-color inner-module  @bright-black;
+
+/* State */
+@define-color warning       @bright-yellow;
+@define-color critical      @red;
+@define-color charging      @bright-green;

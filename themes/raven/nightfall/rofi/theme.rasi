@@ -1,0 +1,46 @@
+* {
+    /* Polaris Colors */
+    obsidian-dark: #05010C;
+    obsidian-dark-glass: #05010c80;
+
+    polaris-night: #1e344a;
+    polaris-river: #58cfe9;
+    polaris-river-glass: #58cfe980;
+    polaris-woods: #027e50;
+    polaris-star: #ffffff;
+
+    lady-slipper: #ad499c;
+    seal: #e7cb05;
+    charlie: #b7410e;
+    blueberry: #4f86f7;
+
+    /* Base 16 Mapping */
+    black:   @obsidian-dark;
+    red:     @charlie;
+    green:   @polaris-woods;
+    yellow:  @seal;
+    blue:    @polaris-river;
+    magenta: @lady-slipper;
+    cyan:    @blueberry;
+    white:   @polaris-star;
+
+    bright-black:    @polaris-night;
+    bright-red:      @charlie;
+    bright-green:    @polaris-woods;
+    bright-yellow:   @seal;
+    bright-blue:     @polaris-river;
+    bright-magenta:  @lady-slipper;
+    bright-cyan:     @blueberry;
+    bright-white:    @polaris-star;
+
+
+    /* Harness Required */
+    background: @obsidian-dark-glass;
+    background-selected: @polaris-river-glass;
+    background-active: @green;
+    foreground: @white;
+    foreground-selected: @white;
+    text-color: @white;
+    border-color: @bright-black;
+    accent: @blue;
+}

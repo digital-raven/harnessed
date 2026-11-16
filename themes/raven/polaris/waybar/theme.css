@@ -1,0 +1,51 @@
+/* Polaris Colors */
+@define-color obsidian-dark #05010C;
+
+@define-color polaris-night #1e344a;
+@define-color polaris-river #58cfe9;
+@define-color polaris-woods #027e50;
+@define-color polaris-star #ffffff;
+
+@define-color lady-slipper #ad499c;
+@define-color seal #e7cb05;
+@define-color charlie #b7410e;
+@define-color blueberry #4f86f7;
+
+/* Base 16 Mapping */
+@define-color black   @obsidian-dark;
+@define-color red     @charlie;
+@define-color green   @polaris-woods;
+@define-color yellow  @seal;
+@define-color blue    @polaris-river;
+@define-color magenta @lady-slipper;
+@define-color cyan    @blueberry;
+@define-color white   @polaris-star;
+
+@define-color bright-black    @polaris-night;
+@define-color bright-red      @charlie;
+@define-color bright-green    @polaris-woods;
+@define-color bright-yellow   @seal;
+@define-color bright-blue     @polaris-river;
+@define-color bright-magenta  @lady-slipper;
+@define-color bright-cyan     @blueberry;
+@define-color bright-white    @polaris-star;
+
+/* Harness Waybar Internal Map. */
+@define-color accent        @bright-white;
+@define-color main-br       @black;
+@define-color main-bg       @black;
+@define-color main-fg       @white;
+@define-color hover-bg      @blue;
+@define-color hover-fg      @blue;
+@define-color outline       @black;
+
+/* Module Backgrounds */
+@define-color workspaces    @green;
+@define-color outer-module  @black;
+@define-color center-module @green;
+@define-color inner-module  @bright-black;
+
+/* State */
+@define-color warning       @yellow;
+@define-color critical      @red;
+@define-color charging      @green;
