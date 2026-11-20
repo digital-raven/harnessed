@@ -24,9 +24,11 @@
         "hypridle" # Idle daemon.
       ];
 
-      # See https://wiki.hyprland.org/Configuring/Environment-variables/
+      # See https://wiki.hypr.land/0.49.0/configuring/environment-variables/
       env = [
+        "XCURSOR_THEME,AncientFuturism"
         "XCURSOR_SIZE,24"
+        "HYPRCURSOR_THEME,AncientFuturism"
         "HYPRCURSOR_SIZE,24"
 
         # XDG Specifications
@@ -35,7 +37,7 @@
         "XDG_SESSION_DESKTOP,Hyprland"
       ];
 
-      # https://wiki.hyprland.org/Configuring/Variables/#misc
+      # https://wiki.hyprland.org/0.48.0/Configuring/Variables/#misc
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;

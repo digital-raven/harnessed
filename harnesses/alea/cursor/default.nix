@@ -5,5 +5,9 @@
       source = ./AncientFuturism;
       recursive = true;
     };
+    ".local/share/icons/default" = {
+      source = ./default;
+      recursive = true;
+    };
   };
 }
