@@ -12,25 +12,39 @@
 # Color picker: hyprpicker
 # Misc: wlogout, hyprlock, hypridle
 #
-{localFlake}: {
+{
   config,
   lib,
-  pkgs,
   ...
-}: {
+}: let
+  cfg = config.themes.raven.stylix;
+in {
   imports = [
-    ../../../harnesses/alea
-
-    localFlake.inputs.stylix.homeModules.stylix
+    # Local
     ./rofi
     ./stylix.nix
     ./waybar
+
+    # Harness
+    ../../../harnesses/alea
   ];
 
-  home.file = {
-    ".config/Wallpapers" = {
-      source = ./Wallpapers;
-      recursive = true;
+  # Define enable option.
+  options.themes.raven.stylix = {
+    enable = lib.mkEnableOption "Enable theme.";
+  };
+
+  # If theme enabled
+  config = lib.mkIf cfg.enable {
+    # Enable harness
+    harnesses.alea.enable = true;
+
+    # Wallpapers
+    home.file = {
+      ".config/Wallpapers" = {
+        source = ./Wallpapers;
+        recursive = true;
+      };
     };
   };
 }

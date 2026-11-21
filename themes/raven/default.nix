@@ -1,0 +1,7 @@
+{...}: {
+  imports = [
+    ./nightfall
+    ./polaris
+    ./stylix
+  ];
+}

@@ -1,3 +1,4 @@
-Themes developed for the Raven operating system.
+Themes developed for the Raven operating system. Re-usable on
+other systems.
 
-Should be re-usable under Harnessed.
+Only enable one at a time.

@@ -1,11 +1,19 @@
 # Inoffensive wlogout
-{...}: {
-  programs.wlogout.enable = true;
+{
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.harnesses.alea;
+in {
+  config = lib.mkIf cfg.enable {
+    programs.wlogout.enable = true;
 
-  home.file = {
-    ".config/wlogout" = {
-      source = ./wlogout;
-      recursive = true;
+    home.file = {
+      ".config/wlogout" = {
+        source = ./wlogout;
+        recursive = true;
+      };
     };
   };
 }
