@@ -4,9 +4,11 @@
 # 0.13.0 is bugged and can't process wildcard includes.
 {
   config,
+  lib,
   pkgs,
   ...
 }: let
+  cfg = config.harnesses.alea;
   pkgs_waybar_0_12_0 =
     import (pkgs.fetchFromGitHub {
       owner = "nixos";
@@ -17,26 +19,28 @@
       inherit (pkgs) system;
     };
 in {
-  # Specific version of waybar
-  programs.waybar = {
-    enable = true;
-    package = pkgs_waybar_0_12_0.waybar;
-  };
+  config = lib.mkIf cfg.enable {
+    # Specific version of waybar
+    programs.waybar = {
+      enable = true;
+      package = pkgs_waybar_0_12_0.waybar;
+    };
 
-  # Brightness and audio control
-  home.packages = with pkgs; [
-    # Regular packages
-    brightnessctl
-    pamixer
-    pulseaudio # Installs pactl
-  ];
+    # Brightness and audio control
+    home.packages = with pkgs; [
+      # Regular packages
+      brightnessctl
+      pamixer
+      pulseaudio # Installs pactl
+    ];
 
-  services.playerctld.enable = true;
+    services.playerctld.enable = true;
 
-  home.file = {
-    ".config/waybar" = {
-      source = ./waybar;
-      recursive = true;
+    home.file = {
+      ".config/waybar" = {
+        source = ./waybar;
+        recursive = true;
+      };
     };
   };
 }

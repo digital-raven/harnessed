@@ -34,23 +34,9 @@
       hyprland = ./hyprland.nix;
     };
 
-    # Home-manager themes. Import 1 via
-    # eg. imports = [inputs.harnessed.themes.<author>.<theme>];
-    themes = {
-      # new-author = {
-      #   new-theme = ./themes/new-author/new-theme;
-      # };
-      raven = {
-        # Usage: Import only one raven theme at a time. Thanks, stylix.
-        nightfall = nixpkgs.lib.modules.importApply ./themes/raven/nightfall {
-          inherit localFlake;
-        };
-        polaris = nixpkgs.lib.modules.importApply ./themes/raven/polaris {
-          inherit localFlake;
-        };
-        stylix = nixpkgs.lib.modules.importApply ./themes/raven/stylix {
-          inherit localFlake;
-        };
+    homeModules = {
+      themes = nixpkgs.lib.modules.importApply ./themes {
+        inherit localFlake;
       };
     };
   };

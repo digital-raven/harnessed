@@ -21,13 +21,21 @@
 #     "HDMI-A-2, 3840x2160@119.88Hz, 1920x0, 1" # Right.
 #   ];
 #
-{...}: {
-  wayland.windowManager.hyprland = {
-    settings = {
-      monitor = [
-        "DP-6, 1920x1080@164.95500, 0x1080, 1" # Left.
-        "HDMI-A-2, 3840x2160@119.88Hz, 1920x0, 1" # Right.
-      ];
+{
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.harnesses.alea;
+in {
+  config = lib.mkIf cfg.enable {
+    wayland.windowManager.hyprland = {
+      settings = {
+        monitor = [
+          "DP-6, 1920x1080@164.95500, 0x1080, 1" # Left.
+          "HDMI-A-2, 3840x2160@119.88Hz, 1920x0, 1" # Right.
+        ];
+      };
     };
   };
 }
