@@ -17,7 +17,7 @@
   lib,
   ...
 }: let
-  cfg = config.themes.raven.stylix;
+  cfg = config.harnessed.themes.raven.stylix;
 in {
   imports = [
     # Local
@@ -30,14 +30,14 @@ in {
   ];
 
   # Define enable option.
-  options.themes.raven.stylix = {
+  options.harnessed.themes.raven.stylix = {
     enable = lib.mkEnableOption "Enable theme.";
   };
 
   # If theme enabled
   config = lib.mkIf cfg.enable {
     # Enable harness
-    harnesses.alea.enable = true;
+    harnessed.harnesses.alea.enable = true;
 
     # Wallpapers
     home.file = {

@@ -5,7 +5,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.harnesses.alea;
+  cfg = config.harnessed.harnesses.alea;
 in {
   imports = [
     ./keybindings.nix

@@ -8,7 +8,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.harnesses.alea;
+  cfg = config.harnessed.harnesses.alea;
   pkgs_waybar_0_12_0 =
     import (pkgs.fetchFromGitHub {
       owner = "nixos";

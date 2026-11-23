@@ -6,7 +6,7 @@
   lib,
   ...
 }: let
-  polaris = config.themes.raven.polaris;
+  polaris = config.harnessed.themes.raven.polaris;
 in {
   config = lib.mkIf polaris.enable {
     home.file = {

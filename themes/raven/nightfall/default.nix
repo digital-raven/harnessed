@@ -18,7 +18,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.themes.raven.nightfall;
+  cfg = config.harnessed.themes.raven.nightfall;
 in {
   imports = [
     # Local
@@ -31,14 +31,14 @@ in {
   ];
 
   # Define enable option.
-  options.themes.raven.nightfall = {
+  options.harnessed.themes.raven.nightfall = {
     enable = lib.mkEnableOption "Enable theme.";
   };
 
   # If theme enabled
   config = lib.mkIf cfg.enable {
     # Enable harness
-    harnesses.alea.enable = true;
+    harnessed.harnesses.alea.enable = true;
 
     # Wallpapers
     home.file = {

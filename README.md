@@ -56,9 +56,9 @@ harnessed.inputs.nixpkgs.follows = "nixpkgs";
   ];
   
   # Choose one Raven theme at a time.
-  #themes.raven.nightfall.enable = true;
-  themes.raven.polaris.enable = true;
-  #themes.raven.stylix.enable = true;
+  #harnessed.themes.raven.nightfall.enable = true;
+  harnessed.themes.raven.polaris.enable = true;
+  #harnessed.themes.raven.stylix.enable = true;
 }
 ```
 

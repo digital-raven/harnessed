@@ -18,7 +18,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.themes.raven.polaris;
+  cfg = config.harnessed.themes.raven.polaris;
 in {
   imports = [
     # Local
@@ -32,14 +32,14 @@ in {
   ];
 
   # Define enable option.
-  options.themes.raven.polaris = {
+  options.harnessed.themes.raven.polaris = {
     enable = lib.mkEnableOption "Enable theme.";
   };
 
   # If theme enabled
   config = lib.mkIf cfg.enable {
     # Enable harness
-    harnesses.alea.enable = true;
+    harnessed.harnesses.alea.enable = true;
 
     # Wallpapers
     home.file = {

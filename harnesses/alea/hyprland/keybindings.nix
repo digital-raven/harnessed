@@ -13,7 +13,7 @@
   menuFlags = "-show drun -theme $HOME/.config/rofi/program-launcher.rasi";
   colorPicker = "hyprpicker";
 
-  cfg = config.harnesses.alea;
+  cfg = config.harnessed.harnesses.alea;
 in {
   config = lib.mkIf cfg.enable {
     # hyprland.conf needs to load the plugins

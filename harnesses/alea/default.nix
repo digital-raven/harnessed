@@ -5,7 +5,7 @@
   lib,
   ...
 }: let
-  cfg = config.harnesses.alea;
+  cfg = config.harnessed.harnesses.alea;
 in {
   imports = [
     ./cursor
@@ -18,7 +18,7 @@ in {
     ./wlogout
   ];
 
-  options.harnesses.alea = {
+  options.harnessed.harnesses.alea = {
     enable = lib.mkEnableOption "Enable harness.";
   };
 

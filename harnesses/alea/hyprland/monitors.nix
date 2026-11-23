@@ -26,7 +26,7 @@
   lib,
   ...
 }: let
-  cfg = config.harnesses.alea;
+  cfg = config.harnessed.harnesses.alea;
 in {
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {

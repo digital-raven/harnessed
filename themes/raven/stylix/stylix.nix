@@ -7,7 +7,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.themes.raven.stylix;
+  cfg = config.harnessed.themes.raven.stylix;
 in {
   config = lib.mkIf cfg.enable {
     stylix.enable = true;

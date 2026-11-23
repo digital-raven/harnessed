@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  cfg = config.themes.raven.polaris;
+  cfg = config.harnessed.themes.raven.polaris;
 in {
   config = lib.mkIf cfg.enable {
     home.file = {
